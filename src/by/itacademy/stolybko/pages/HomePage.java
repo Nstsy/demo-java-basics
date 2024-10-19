@@ -1,11 +1,11 @@
 package by.itacademy.stolybko.pages;
 
 public class HomePage extends BasePage {
-    protected String HOME_URL = BASE_URL + "/домашняя страница";
-    private String title = "Домашняя страница";
+    protected String HOME_URL = BASE_URL + "/home page";
+    private String title = "Home page";
 
     public void open() {
-        System.out.println("Пользователь открыл страницу" + HOME_URL);
+        System.out.println("The user opened the page " + HOME_URL);
     }
 
     public String getTitle() {
@@ -13,6 +13,6 @@ public class HomePage extends BasePage {
     }
 
     public void clickLogin() {
-        System.out.println("Пользователь кликнул по кнопке Войти");
+        System.out.println("The user clicked the Login button");
     }
 }
