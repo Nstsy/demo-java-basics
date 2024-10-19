@@ -2,7 +2,11 @@ package by.itacademy.stolybko.numbers;
 
 public class Main {
     public static void main(String[] args) {
-        int number = 7;
+        int number = 5;
+        System.out.println(getNameNumber(number));
+    }
+
+    public static String getNameNumber(int number) {
         String numberAsAString = "";
         switch (number) {
             case 1:
@@ -39,6 +43,6 @@ public class Main {
                 numberAsAString = "";
                 break;
         }
-        System.out.println(numberAsAString);
+        return numberAsAString;
     }
 }
