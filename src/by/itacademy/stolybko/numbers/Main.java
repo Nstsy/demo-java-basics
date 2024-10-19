@@ -34,10 +34,11 @@ public class Main {
                 break;
             case 0:
                 numberAsAString = "zero";
+                break;
             default:
                 numberAsAString = "";
+                break;
         }
         System.out.println(numberAsAString);
     }
-
 }
