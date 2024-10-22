@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+
+        th, td {
+            display: inline-block;
+            text-align: center;
+            width: 50%;
+            margin-top: 10px;
+        }
+
+        table, tbody {
+            display: block;
+            border: none;
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 0;
+        }
+
+        .block {
+            display: block;
+            margin: auto;
+            width: 340px;
+            height: auto;
+            background-color: #2b2933;
+            text-align: center;
+            border: 20px solid #2b2933;
+            border-radius: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #ec6011;
+            color: white;
+            border: none;
+            width: 98%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 98%;
+            height: 80px;
+            margin-top: 10px;
+            color: #c4c4c4;
+        }
+
+        input[type="text"] {
+            display: inline-block;
+            color: #c4c4c4;
+            padding: 5px;
+            width: 90%;
+            text-align: left;
+            margin: auto auto;
+            vertical-align: middle;
+        }
+
+        h1, h4 {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+<div class="block">
+    <h4 style="color: white">Мы были бы рады получить известия от вас!</h4>
+    <h1 style="color: white">Связаться с нами</h1>
+    <table>
+        <tr>
+            <th>
+                <input type="text" id="email" name="email" value="Enter a valid email address"><br>
+            </th>
+            <th>
+                <input type="text" id="name" name="name" value="Enter your name"><br>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="address" name="address" value="Enter your address "><br>
+            </td>
+            <td>
+                <input type="text" id="phone" name="phone" value="Enter your phone"><br>
+            </td>
+        </tr>
+    </table>
+    <textarea name="message">Input your message</textarea><br>
+    <input type="submit" value="ПРЕДСТАВЛЯТЬ НА РАССМОТРЕНИЕ">
+</div>
+</body>
+</html>
