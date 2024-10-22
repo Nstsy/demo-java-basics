@@ -11,6 +11,12 @@ public class CalculatorTest {
     public void test1() {
         WebDriver webDriver = new ChromeDriver();
         webDriver.get("https://svyatoslav.biz/testlab/wt/index.php");
+
+        String xpathName = "/html/body/table/tbody/tr[2]/td[2]/form/table/tbody/tr[2]/td[2]/input";
+        By byName = By.xpath(xpathName);
+        WebElement webElementName = webDriver.findElement(byName);
+        webElementName.sendKeys("Ivan");
+
         String xpath = "/html/body/table/tbody/tr[2]/td[2]/form/table/tbody/tr[6]/td/input";
         By by = By.xpath(xpath);
         WebElement webElement = webDriver.findElement(by);
