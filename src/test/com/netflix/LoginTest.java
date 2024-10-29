@@ -12,8 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-//Сайт - Форма логина https://www.netflix.com/login
-//пустые поля, одно из полей заполнено, оба поля заполнены незарегистрированным пользователем
 public class LoginTest {
     @Test
     public void testEmptyFields(){
