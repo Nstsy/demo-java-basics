@@ -14,6 +14,7 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     public void acceptCookies() {
@@ -31,28 +32,31 @@ public class LoginPage {
         driver.findElement(By.xpath(LoginXpath.BUTTON_SIGNIN_XPATH)).click();
     }
 
-    public void sendKeysTelephone(String telephone){
+    public void sendKeysTelephone(String telephone) {
         driver.findElement(By.xpath(LoginXpath.INPUT_TELEPHONE_XPATH)).sendKeys(telephone);
     }
 
-    public void sendKeysPassword(String password){
+    public void sendKeysPassword(String password) {
         driver.findElement(By.xpath(LoginXpath.INPUT_PASSWORD_XPATH)).sendKeys(password);
     }
 
     public String getTextEmptyFields() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-        return driver.findElement(By.className(LoginXpath.EMPTY_FIELDS_XPATH)).getText();
+        WebElement textEmptyFields = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(LoginXpath.EMPTY_FIELDS_CLASS)));
+        return textEmptyFields.getText();
     }
 
-    public String getTextEmptyPassword(){
-       return driver.findElement(By.xpath(LoginXpath.EMPTY_PASSWORD_XPATH)).getText();
+    public String getTextEmptyPassword() {
+        WebElement textEmptePassword = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(LoginXpath.EMPTY_PASSWORD_CLASS)));
+        return textEmptePassword.getText();
     }
 
-    public String getTestEmptyTelephone(){
-        return driver.findElement(By.xpath(LoginXpath.EMPTY_TELEPHONE_XPATH)).getText();
+    public String getTestEmptyTelephone() {
+        WebElement textEmptyTelephone = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className(LoginXpath.EMPTY_TELEPHONE_CLASS)));
+        return textEmptyTelephone.getText();
     }
 
-    public String getTextInvaledData(){
-        return driver.findElement(By.xpath(LoginXpath.INVALID_DATA_XPATH)).getText();
+    public String getTextInvaledData() {
+        WebElement textInvaledData = wait.until(ExpectedConditions.visibilityOfElementLocated((By.className(LoginXpath.INVALID_DATA_CLASS))));
+        return textInvaledData.getText();
     }
 }

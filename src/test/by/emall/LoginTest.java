@@ -11,8 +11,10 @@ public class LoginTest {
         WebDriver driver = new ChromeDriver();
         driver.get("https://emall.by/login/password");
         LoginPage loginPage = new LoginPage(driver);
+
         loginPage.clickButtonSignIn();
         loginPage.acceptCookies();
+
         Assertions.assertEquals(LoginMessage.EMPTY_FIELDS, loginPage.getTextEmptyFields());
     }
 
@@ -21,9 +23,11 @@ public class LoginTest {
         WebDriver driver = new ChromeDriver();
         driver.get("https://emall.by/login/password");
         LoginPage loginPage = new LoginPage(driver);
+
         loginPage.sendKeysTelephone("292305623");
         loginPage.clickButtonSignIn();
         loginPage.acceptCookies();
+
         Assertions.assertEquals(LoginMessage.EMPTY_PASSWORD, loginPage.getTextEmptyPassword());
     }
 
@@ -32,9 +36,11 @@ public class LoginTest {
         WebDriver driver = new ChromeDriver();
         driver.get("https://emall.by/login/password");
         LoginPage loginPage = new LoginPage(driver);
+
         loginPage.sendKeysPassword("rrr11");
         loginPage.clickButtonSignIn();
         loginPage.acceptCookies();
+
         Assertions.assertEquals(LoginMessage.EMPTY_TELEPHONE, loginPage.getTestEmptyTelephone());
     }
 
@@ -43,10 +49,12 @@ public class LoginTest {
         WebDriver driver = new ChromeDriver();
         driver.get("https://emall.by/login/password");
         LoginPage loginPage = new LoginPage(driver);
+
         loginPage.sendKeysPassword("rrr11");
         loginPage.sendKeysTelephone("292563256");
         loginPage.clickButtonSignIn();
         loginPage.acceptCookies();
+
         Assertions.assertEquals(LoginMessage.INVALID_DATA, loginPage.getTextInvaledData());
     }
 }

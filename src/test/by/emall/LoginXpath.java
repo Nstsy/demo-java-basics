@@ -7,8 +7,8 @@ public class LoginXpath {
     public static final String INPUT_TELEPHONE_XPATH = "/html/body/div[1]/div[1]/div/div[1]/form/div[1]/input";
     public static final String INPUT_PASSWORD_XPATH = "/html/body/div[1]/div[1]/div/div[1]/form/div[2]/input";
 
-    public static final String EMPTY_FIELDS_XPATH= "/html/body/div[1]/div[1]/div/div[1]/form/div[3]";
-    public static final String EMPTY_TELEPHONE_XPATH = "//*[@id=\"__next\"]/div[1]/div/div[1]/form/div[3]/text()";
-    public static final String EMPTY_PASSWORD_XPATH = "//*[@id=\"__next\"]/div[1]/div/div[1]/form/div[3]/text()";
-    public static final String INVALID_DATA_XPATH = "/html/body/div[1]/div[1]/div/div[1]/form/div[3]/text()";
+    public static final String EMPTY_FIELDS_CLASS= "password_error_message__KRNDP";
+    public static final String EMPTY_TELEPHONE_CLASS = "password_error_message__KRNDP";
+    public static final String EMPTY_PASSWORD_CLASS = "password_error_message__KRNDP";
+    public static final String INVALID_DATA_CLASS = "password_error_message__KRNDP";
 }
