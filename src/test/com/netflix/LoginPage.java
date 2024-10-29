@@ -38,5 +38,3 @@ public class LoginPage {
         driver.findElement(By.xpath(LoginXpath.FIELD_PASSWORD_XPATH)).sendKeys(password);
     }
 }
-
-
